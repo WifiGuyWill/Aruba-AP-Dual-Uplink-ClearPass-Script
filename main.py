@@ -27,7 +27,8 @@ def activate_inventory(session):
         response_data = response.json()
         devices = response_data['devices']
         for ap in devices:
-            if ap['additionalData']['partCategory'] == "UAP" or ap['additionalData']['partCategory'] == "IAP" or ap['additionalData']['partCategory'] == "CAP" or ap['additionalData']['partCategory'] == "RAP":
+            ap_type = ap['additionalData']['partCategory']
+            if ap_type == "UAP" or ap_type == "IAP" or ap_type == "RAP" or ap_type == "AP" or ap_type == "CAP":
                 for mac in devices:
                     f.write(mac['mac'] + "\n")
                 return
