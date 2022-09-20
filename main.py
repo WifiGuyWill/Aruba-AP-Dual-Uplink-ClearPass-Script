@@ -20,7 +20,7 @@ def activate_login():
         return
 
 def activate_inventory(session):
-    f = open("temp/ap_mac_eth0.txt", "w")
+    f = open("ap_mac_eth0.txt", "w")
     inventory_url = "https://activate.arubanetworks.com/api/ext/inventory.json?action=query"
     try:
         response = session.post(inventory_url)
@@ -34,7 +34,7 @@ def activate_inventory(session):
 def ap_mac_address_opperation():
     try:
         ap_mac = open("ap_mac_eth1.txt", "w")
-        with open('temp/ap_mac_eth0.txt') as f:
+        with open('ap_mac_eth0.txt') as f:
             for line in f:
                 ap_mac_line = line.strip()
                 ap_mac_address = ap_mac_line.replace(":", "")
