@@ -3,12 +3,10 @@
 ```
  % python3 main.py
 --- Starting ---
-{'mac_address': '20:4C:03:7D:1B:CC', 'description': 'AP Eth1 MAC Address', 'status': 'Known'}
-20:4C:03:8C:1A:AB Successfully Added to ClearPass
-There was an error updating ClearPass
-{'mac_address': '00:4E:35:C3:A5:19', 'description': 'AP Eth1 MAC Address', 'status': 'Known'}
-00:4E:35:C6:A4:89 Successfully Added to ClearPass
-There was an error updating ClearPass
+{'mac_address': '20:4C:03:7D:1B:AC', 'description': 'AP Eth1 MAC Address', 'status': 'Known'}
+20:4C:03:7D:1B:AC Successfully Added to ClearPass
+{'mac_address': '00:4E:35:C5:B4:89', 'description': 'AP Eth1 MAC Address', 'status': 'Known'}
+00:4E:35:C5:B4:89 Successfully Added to ClearPass
 --- Finished ---
 ```
 
