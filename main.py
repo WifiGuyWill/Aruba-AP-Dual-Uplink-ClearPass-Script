@@ -56,7 +56,7 @@ def clearpass_endpointdb_update():
                 print(payload)
                 if response.status_code == 201:
                     print(ap_mac_line + " Successfully Added to ClearPass")
-                if response.status_code == 422:
+                elif response.status_code == 422:
                     print(ap_mac_line + " Already Added to ClearPass...Skipping")
                 else:
                     print("There was an error updating ClearPass")
