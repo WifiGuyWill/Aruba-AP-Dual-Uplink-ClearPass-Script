@@ -5,7 +5,7 @@ import requests
 activate_username = "username"
 activate_password = "password"
 clearpass_hostname = "clearpass.hostname.com"
-clearpass_bearer_token = "fb686e72f35276f4559b976b65431383e168d9e1"
+clearpass_bearer_token = "fb686e72f35276f4559b976b65441383e168d9e1"
 
 def activate_login():
     session = requests.Session()
