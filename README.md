@@ -1,4 +1,5 @@
-# Aruba script to auto update the endpoints database in ClearPass with Aruba AP secondary (ETH1) hardware info
+# Dual Uplink AP Automation for ClearPass
+This script auto updates endpoints database in ClearPass with Aruba AP secondary (ETH1) MAC-Address with data pulled from Aruba Activate.
 
 ```
  % python3 main.py
