@@ -26,8 +26,11 @@ def activate_inventory(session):
         response = session.post(inventory_url)
         response_data = response.json()
         devices = response_data['devices']
-        for mac in devices:
-            f.write(mac['mac'] + "\n")
+        for ap in devices:
+            if ap['additionalData']['partCategory'] == "UAP" or ap['additionalData']['partCategory'] == "IAP" or ap['additionalData']['partCategory'] == "CAP" or ap['additionalData']['partCategory'] == "RAP":
+                for mac in devices:
+                    f.write(mac['mac'] + "\n")
+                return
     except:
         print("Error with Activate inventory query")
 
