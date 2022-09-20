@@ -1,12 +1,16 @@
 #!/usr/bin/python3
 #(c) 2022 Will Smith
 
-import requests
+
+#Fill in the following info for Aruba Activate and ClearPasss:
 activate_username = "username"
 activate_password = "password"
 clearpass_hostname = "clearpass.hostname.com"
 clearpass_bearer_token = "fb686e72f35276f4559b976b65441383e168d9e1"
 
+
+import requests
+#Logs into activate, returns session token
 def activate_login():
     session = requests.Session()
     logon_url = "https://activate.arubanetworks.com/LOGIN"
@@ -19,6 +23,7 @@ def activate_login():
         print("Error Logging into Activate")
         return
 
+#Queries activate for AP inventory, writes to file
 def activate_inventory(session):
     f = open("ap_mac_eth0.txt", "w")
     inventory_url = "https://activate.arubanetworks.com/api/ext/inventory.json?action=query"
@@ -35,6 +40,7 @@ def activate_inventory(session):
     except:
         print("Error with Activate inventory query")
 
+#Parses the mac-address info, adds one to the last octect and writes to new file
 def ap_mac_address_opperation():
     try:
         ap_mac = open("ap_mac_eth1.txt", "w")
@@ -48,6 +54,7 @@ def ap_mac_address_opperation():
     except:
         print("Error with mac address opperation")
 
+#Creates new records in endpoints database in ClearPass
 def clearpass_endpointdb_update():
     try:
         with open("ap_mac_eth1.txt") as ap_mac:
