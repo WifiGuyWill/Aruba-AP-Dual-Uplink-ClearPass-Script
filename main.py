@@ -10,7 +10,7 @@ clearpass_bearer_token = "fb686e72f35276f4559b976b65441383e168d9e1"
 
 
 import requests
-#Logs into activate, returns session token
+#Log into activate, returns session token
 def activate_login():
     session = requests.Session()
     logon_url = "https://activate.arubanetworks.com/LOGIN"
