@@ -29,7 +29,7 @@ def activate_inventory(session):
         for mac in devices:
             f.write(mac['mac'] + "\n")
     except:
-        print("Error with Activate inventroy query")
+        print("Error with Activate inventory query")
 
 def ap_mac_address_opperation():
     try:
