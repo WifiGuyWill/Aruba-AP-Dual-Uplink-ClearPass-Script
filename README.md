@@ -12,10 +12,10 @@ This script auto updates endpoints database in ClearPass with Aruba AP secondary
 ```
 
 Download the repo, make sure Python is installed.
-Edit main.py and enter the credentials for Aruba Activate and Bearer tokenn for ClearPass.
+Edit main.py and enter the credentials for Aruba Activate and Bearer token for ClearPass.
 Then execute the script 'python3 main.py'
 
-The script will first log into Aruba Activate and download the inventory of devices. Then parse the inventory for the mac-address of each device and add one hexadecimal to match the redudant hardware mac-address for each AP (ETH1). The script will then create a new Endpoints database entry for each new mac-address in ClearPass.
+The script will first log into Aruba Activate and download the inventory of devices. Then parse the inventory for the mac-address of each device and add one hexadecimal to match the redundant hardware mac-address for each AP (ETH1). The script will then create a new Endpoints database entry for each new mac-address in ClearPass.
 
 Please feel free to modify or provide any comments or feedback.
 
